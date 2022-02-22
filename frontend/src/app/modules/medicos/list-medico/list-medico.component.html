@@ -1,0 +1,78 @@
+<!-- ============================================================== -->
+<!-- Page wrapper  -->
+<!-- ============================================================== -->
+<div class="page-wrapper">
+  <!-- ============================================================== -->
+  <!-- Container fluid  -->
+  <!-- ============================================================== -->
+  <div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <app-breadcrumb-admin [title]='title'></app-breadcrumb-admin>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- News -->
+    <!-- ============================================================== -->
+    <div class="row">
+      <!-- column -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex">
+              <div>
+                <h5 class="card-title">Sales Overview</h5>
+                <h6 class="card-subtitle">Check the monthly sales </h6>
+              </div>
+              <div class="ml-auto">
+                <select class="custom-select b-0">
+                  <option>January</option>
+                  <option value="1">February</option>
+                  <option value="2" selected="">March</option>
+                  <option value="3">April</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+
+            <table class="table table-hover">
+              <thead>
+                <tr class="text-center">
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Rol</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center" *ngFor="let medico of medicos">
+                  <td>{{medico.id}}</td>
+                  <td>{{medico.user.name}} {{medico.user.lastname}}</td>
+                  <td>{{medico.user.email}}</td>
+                  <td>{{medico.user.role}}</td>
+                  <td>
+                    <button (click)="edit(medico.id)" class="btn btn-warning">Editar</button>
+                    <button (click)="delete(medico.id)" class="btn btn-danger ml-2">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Container fluid  -->
+  <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
+
+
+

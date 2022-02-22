@@ -1,0 +1,101 @@
+<!-- ============================================================== -->
+<!-- Page wrapper  -->
+<!-- ============================================================== -->
+<div class="page-wrapper">
+  <!-- ============================================================== -->
+  <!-- Container fluid  -->
+  <!-- ============================================================== -->
+  <div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <app-breadcrumb-admin [title]='title'></app-breadcrumb-admin>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- News -->
+    <!-- ============================================================== -->
+    <div class="row">
+      <!-- column -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex">
+              <div>
+                <h5 class="card-title">Sales Overview</h5>
+                <h6 class="card-subtitle">Check the monthly sales </h6>
+              </div>
+              <div class="ml-auto">
+                <select class="custom-select b-0">
+                  <option>January</option>
+                  <option value="1">February</option>
+                  <option value="2" selected="">March</option>
+                  <option value="3">April</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <!-- <table mat-table [dataSource]="pacientes" class=" mat-elevation-z8" style="width: 100%;">
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>Id</th>
+                <td mat-cell *matCellDef="let paciente"> {{paciente.id}} </td>
+              </ng-container>
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Nombre</th>
+                <td mat-cell *matCellDef="let paciente"> {{paciente.name}} </td>
+              </ng-container>
+              <ng-container matColumnDef="lastname">
+                <th mat-header-cell *matHeaderCellDef>Apellido</th>
+                <td mat-cell *matCellDef="let paciente"> {{paciente.lastname}} </td>
+              </ng-container>
+              <ng-container matColumnDef="acciones">
+                <th mat-header-cell *matHeaderCellDef>Acciones</th>
+                <td mat-cell *matCellDef="let paciente"><button (click)="Edit(paciente.id)" class="btn btn-warning">Editar</button>
+                <button (click)="Delete(paciente.id)" class="btn btn-danger ms-2">Eliminar</button></td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="['id', 'name', 'lastname', 'acciones']"></tr>
+              <tr mat-row *matRowDef="let fila; columns: ['id','name', 'lastname', 'acciones'];"></tr>
+            </table> -->
+
+            <table class="table table-hover">
+              <thead>
+                <tr class="text-center">
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Telefono</th>
+                  <th>Dirección</th>
+                  <th>Rol</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center" *ngFor="let paciente of pacientes">
+                  <td>{{paciente.id}}</td>
+                  <td>{{paciente.user.name}} {{paciente.user.lastname}}</td>
+                  <td>{{paciente.phone}}</td>
+                  <td>{{paciente.address}}</td>
+                  <td>{{paciente.user.role}}</td>
+                  <td>
+                    <button (click)="Edit(paciente.id)" class="btn btn-warning">Editar</button>
+                    <button (click)="Delete(paciente.id)" class="btn btn-danger ml-2">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Container fluid  -->
+  <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
+
+

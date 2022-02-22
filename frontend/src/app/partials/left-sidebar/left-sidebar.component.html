@@ -1,0 +1,55 @@
+<!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+          <div class="d-flex no-block nav-text-box align-items-center pt-2 pb-2">
+              <span><img width="50" src="assets/images/angular_whiteTransparent.png" alt="elegant admin template"></span>
+              <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i class="ti-menu"></i></a>
+              <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+          </div>
+          <!-- Sidebar scroll-->
+          <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+              <ul id="sidebarnav">
+                <li>
+                  <a class="waves-effect waves-dark" aria-expanded="false" routerLink="/"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
+                </li>
+                <li>
+                  <a class="waves-effect waves-dark" aria-expanded="false" data-toggle="collapse" data-target="#navbarPacientes" aria-controls="navbarPacientes" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <span class="hide-menu">Pacientes</span>
+                  </a>
+                  <ul class="collapse" id="navbarPacientes">
+                    <li><a class="waves-effect waves-dark" routerLink="/pacientes/list">Listado Pacientes</a></li>
+                    <li><a class="waves-effect waves-dark" routerLink="/pacientes/add">Agregar Paciente</a></li>
+                    <li><a class="waves-effect waves-dark" routerLink="/citas/add">Asignar Citas</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="waves-effect waves-dark" aria-expanded="false" data-toggle="collapse" data-target="#navbarMedicos" aria-controls="navbarMedicos" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-user-doctor"></i><span class="hide-menu"></span>Médicos</a>
+                  <ul class="collapse" id="navbarMedicos">
+                    <li><a class="waves-effect waves-dark" routerLink="/medicos/list">Listado Médicos</a></li>
+                    <li><a class="waves-effect waves-dark" routerLink="/medicos/add">Agregar Médico</a></li>
+                    <li><a class="waves-effect waves-dark" routerLink="/citas/citas-asignadas">Citas Asignadas</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="waves-effect waves-dark" aria-expanded="false" data-toggle="collapse" data-target="#navbarConsultorios" aria-controls="navbarConsultorios" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <span class="hide-menu">Consultorios</span>
+                  </a>
+                  <ul class="collapse" id="navbarConsultorios">
+                    <li><a class="waves-effect waves-dark" routerLink="/consultorios/list">Listado Consultorios</a></li>
+                    <li><a class="waves-effect waves-dark" routerLink="/consultorios/add">Agregar Consultorio</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+          </div>
+          <!-- End Sidebar scroll-->
+      </aside>
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->

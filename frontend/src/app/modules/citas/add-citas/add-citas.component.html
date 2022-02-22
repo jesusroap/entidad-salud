@@ -1,0 +1,46 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <app-breadcrumb-admin [title]='title'></app-breadcrumb-admin>
+    <div class="row">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <form [formGroup]="cita">
+              <div class="form-group">
+                <label for="date" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="name" formControlName="date">
+              </div>
+              <div formGroupName="patient">
+                <div class="form-group">
+                  <label for="id" >Paciente</label>
+                  <select class="form-control" formControlName="id">
+                    <option value="{{paciente.id}}" *ngFor="let paciente of pacientes">{{paciente.id}} -- {{paciente.user.name}} {{paciente.user.lastname}}</option>
+                  </select>
+                </div>
+              </div>
+              <div formGroupName="doctor">
+                <div class="form-group">
+                  <label for="id" >Doctor</label>
+                  <select class="form-control" formControlName="id">
+                    <option value="{{medico.id}}" *ngFor="let medico of medicos">{{medico.id}} -- {{medico.user.name}} {{medico.user.lastname}}</option>
+                  </select>
+                </div>
+              </div>
+              <div formGroupName="clinic">
+                <div class="form-group">
+                  <label for="id" >Consultorio</label>
+                  <select class="form-control" formControlName="id">
+                    <option value="{{consultorio.id}}" *ngFor="let consultorio of consultorios">{{consultorio.id}} -- {{consultorio.department}}, {{consultorio.municipality}}, {{consultorio.address}}</option>
+                  </select>
+                </div>
+              </div>
+              <button (click)="onSubmit()" type="submit" class="btn btn-primary">Agregar</button>
+              <button (click)="volver()" class="btn btn-primary ml-2">Volver</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

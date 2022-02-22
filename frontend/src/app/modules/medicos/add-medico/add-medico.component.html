@@ -1,0 +1,33 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <app-breadcrumb-admin [title]='title'></app-breadcrumb-admin>
+    <div class="row">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <form [formGroup]="medico">
+              <div formGroupName="user">
+                <div class="form-group">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="name" formControlName="name">
+                </div>
+                <div class="form-group">
+                  <label for="lastname" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="lastname" formControlName="lastname">
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" formControlName="email">
+                </div>
+                <input type="hidden" class="form-control" id="role" formControlName="role">
+              </div>
+              <button (click)="onSubmit()" type="submit" class="btn btn-primary">Agregar</button>
+              <button (click)="volver()" class="btn btn-primary ml-2">Volver</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
